@@ -5,7 +5,7 @@ bucket = "vamshi_ccit.bucket"
 resource "aws_s3_bucket_ownership_controls" "two" {
 bucket = aws_s3_bucket.one.id
 rule {
-object_owership = "BucketOwnerPreferred"
+object_ownership = "BucketOwnerPreferred"
 }
 }
 resource "aws_s3_bucket_acl" "three" {
