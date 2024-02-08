@@ -20,10 +20,3 @@ versioning_configuration {
 status = "Enabled"
 }
 }
-terraform {
-backend "s3" {
-bucker = "vamshi_ccit.bucket"
-key = "prod/terrafrom.tfstate"
-region = "us-east-1"
-}
-}
