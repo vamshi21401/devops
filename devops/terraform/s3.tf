@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "one" {
-bucket = "vamshi_ccit.bucket"
+bucket = "sm7243.flm.bucket"
 }
 
 resource "aws_s3_bucket_ownership_controls" "two" {
