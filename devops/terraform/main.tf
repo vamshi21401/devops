@@ -7,7 +7,7 @@ key_name = "ansible"
 resource "aws_elb" "web_server_lb" {
 name = "web-server-lb"
 security_groups = [aws_security_group.web_server.id]
-subnets = ["subnet-014ada08800354022", "subnet-0e0d23dac85a42572"]
+subnets = ["subnet-014ada08800354022", "subnet-03c56132e625b3ada"]
 listener {
 instance_port = 8000
 instance_protocol = "http"
@@ -26,7 +26,7 @@ resource "aws_autoscaling_group" "web_server_asg" {
     desired_capacity     = 2
     health_check_type    = "EC2"
     load_balancers       = [aws_elb.web_server_lb.name]
-    availability_zones    = ["us-east-1b", "us-east-1c"] 
+    availability_zones    = ["us-east-1b", "us-east-1d"] 
     
   }
 
